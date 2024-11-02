@@ -1,0 +1,85 @@
+:root{
+    --bg-color: rgb(46, 209, 13);
+    --main-color: white;
+    --dark-color: black;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: var(--main-color);
+    background: var(--bg-color);
+}
+
+div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+    border-top: 4px solid #CCC;
+}
+
+.video-section:first-child {
+    border-top: none;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9rem;
+}
+
+.thumbnail-image {
+    width: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    border-radius: 10px;
+}
+button{
+    width: 20%;
+    background: transparent;
+    color: var(--main-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
